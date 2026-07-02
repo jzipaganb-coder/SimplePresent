@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="tl">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260702-05-84893f2"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Yab 🌸</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --pink-primary:#e8547c;
+    --pink-deep:#b73a5c;
+    --blush:#fdeef2;
+    --paper:#fffaf6;
+    --paper-shadow:#f3e3da;
+    --plum:#4a2438;
+    --gold:#d9a44a;
+    --mauve:#a9647e;
+    --petal:#f7b9ce;
+    --ok:#7fae7a;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    min-height:calc(100 * min(var(--vh,1vh),1vh));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cormorant Garamond', serif;
+    background:
+      radial-gradient(circle at 20% 20%, #fde3ec 0%, transparent 45%),
+      radial-gradient(circle at 85% 15%, #fbd6e4 0%, transparent 40%),
+      radial-gradient(circle at 50% 90%, #f6c9dc 0%, transparent 50%),
+      linear-gradient(160deg, #fff5f8 0%, #fde9f0 45%, #fbdce9 100%);
+    overflow:hidden;
+    padding:24px;
+  }
+
+  /* ========== DISCORD INTRO ========== */
+  #discord-intro{
+    position:fixed; inset:0; z-index:999;
+    background:#36393f;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    font-family:'Quicksand',sans-serif;
+    color:#dcddde;
+    transition:opacity .8s ease;
+  }
+  #discord-intro.fade-out{ opacity:0; pointer-events:none; }
+  .discord-logo{
+    width:70px; height:70px; margin-bottom:24px;
+    animation:discordPulse 1.6s ease-in-out infinite;
+  }
+  @keyframes discordPulse{
+    0%,100%{transform:scale(1); filter:drop-shadow(0 0 6px #5865f2);}
+    50%{transform:scale(1.08); filter:drop-shadow(0 0 18px #5865f2);}
+  }
+  .discord-status{
+    font-size:18px; letter-spacing:.04em; color:#b9bbbe;
+    min-height:28px; text-align:center;
+  }
+  .discord-bar{
+    width:260px; height:4px; background:#4f545c;
+    border-radius:4px; margin-top:22px; overflow:hidden;
+  }
+  .discord-bar-fill{
+    height:100%; width:0%; background:linear-gradient(90deg,#5865f2,#eb459e);
+    border-radius:4px; transition:width .6s cubic-bezier(.4,0,.2,1);
+  }
+  .discord-meeting{
+    margin-top:30px; font-size:22px; color:#fff; font-weight:700;
+    letter-spacing:.06em; opacity:0; transition:opacity .6s ease;
+    text-align:center; line-height:1.4;
+  }
+  .discord-meeting span{color:#eb459e;}
+  .discord-skip{
+    position:absolute; bottom:24px; right:28px;
+    font-size:13px; color:#72767d; cursor:pointer;
+    font-family:'Quicksand',sans-serif;
+    background:transparent; border:1px solid #4f545c;
+    padding:6px 14px; border-radius:6px;
+    transition:color .2s, border-color .2s;
+  }
+  .discord-skip:hover{color:#dcddde; border-color:#72767d;}
+  .voice-wave{
+    display:flex; align-items:flex-end; gap:5px; height:30px; margin-top:18px; opacity:0;
+    transition:opacity .5s ease;
+  }
+  .voice-wave.show{opacity:1;}
+  .voice-bar{
+    width:6px; background:#57f287; border-radius:3px;
+    animation:voiceAnim 1s ease-in-out infinite;
+  }
+  .voice-bar:nth-child(1){height:10px; animation-delay:0s;}
+  .voice-bar:nth-child(2){height:22px; animation-delay:.15s;}
+  .voice-bar:nth-child(3){height:16px; animation-delay:.3s;}
+  .voice-bar:nth-child(4){height:26px; animation-delay:.1s;}
+  .voice-bar:nth-child(5){height:12px; animation-delay:.25s;}
+  @keyframes voiceAnim{
+    0%,100%{transform:scaleY(1);}
+    50%{transform:scaleY(1.8);}
+  }
+
+  /* ========== TIMELINE ========== */
+  #timeline-screen{
+    position:fixed; inset:0; z-index:998;
+    background:linear-gradient(160deg,#fff5f8,#fde9f0 60%,#fbdce9);
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    padding:30px 20px;
+    opacity:0; pointer-events:none;
+    transition:opacity .8s ease;
+  }
+  #timeline-screen.show{ opacity:1; pointer-events:auto; }
+  .timeline-title{
+    font-family:'Dancing Script',cursive;
+    font-size:clamp(26px,6vw,44px);
+    color:var(--pink-deep);
+    margin-bottom:10px; text-align:center;
+  }
+  .timeline-sub{
+    font-family:'Quicksand',sans-serif;
+    font-size:14px; color:var(--mauve);
+    letter-spacing:.1em; text-transform:uppercase;
+    margin-bottom:32px;
+  }
+  .timeline{
+    display:flex; flex-direction:column; gap:0;
+    width:min(520px,90vw); position:relative;
+  }
+  .timeline::before{
+    content:''; position:absolute;
+    left:28px; top:14px; bottom:14px; width:2px;
+    background:linear-gradient(180deg,var(--petal),var(--pink-deep),var(--petal));
+    border-radius:2px;
+  }
+  .tl-item{
+    display:flex; align-items:flex-start; gap:18px;
+    padding:0 0 28px 0;
+    opacity:0; transform:translateX(-24px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .tl-item.reveal{ opacity:1; transform:translateX(0); }
+  .tl-dot{
+    width:28px; height:28px; flex-shrink:0;
+    background:linear-gradient(135deg,var(--pink-primary),var(--pink-deep));
+    border-radius:50%; border:3px solid var(--paper);
+    box-shadow:0 0 0 2px var(--pink-primary);
+    display:flex; align-items:center; justify-content:center;
+    font-size:13px; position:relative; z-index:1;
+    margin-top:2px;
+  }
+  .tl-content{ flex:1; }
+  .tl-date{
+    font-family:'Quicksand',sans-serif;
+    font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--mauve); margin-bottom:3px;
+  }
+  .tl-text{
+    font-size:16px; line-height:1.55; color:var(--plum);
+  }
+  .tl-text strong{ color:var(--pink-deep); }
+  .timeline-btn-row{
+    margin-top:6px; display:flex; justify-content:center;
+  }
+
+  /* ========== PETALS ========== */
+  .petals{position:fixed; inset:0; pointer-events:none; z-index:0;}
+  .petal{
+    position:absolute; top:-5%;
+    width:14px; height:14px;
+    background: radial-gradient(circle at 30% 30%, #ffe1ec, var(--petal) 70%);
+    border-radius: 70% 0 70% 0;
+    opacity:.55;
+    animation: fall linear infinite, sway ease-in-out infinite;
+  }
+  @keyframes fall{ to{ transform:translateY(112vh); } }
+  @keyframes sway{ 0%,100%{ margin-left:0; } 50%{ margin-left:40px; } }
+
+  /* ========== FLOATING HEARTS ========== */
+  .hearts{position:fixed; inset:0; pointer-events:none; z-index:0;}
+  .heart{
+    position:absolute; bottom:-10%;
+    font-size:18px; opacity:0;
+    animation:floatHeart linear infinite;
+  }
+  @keyframes floatHeart{
+    0%{opacity:0; transform:translateY(0) scale(.8);}
+    10%{opacity:.7;}
+    90%{opacity:.5;}
+    100%{opacity:0; transform:translateY(-110vh) scale(1.2);}
+  }
+
+  /* ========== BALLOONS ========== */
+  .balloons{position:fixed; inset:0; pointer-events:none; z-index:0;}
+  .balloon-el{
+    position:absolute; bottom:-15%;
+    font-size:28px; opacity:0;
+    animation:floatBalloon ease-in infinite;
+  }
+  @keyframes floatBalloon{
+    0%{opacity:0; transform:translateX(0) translateY(0);}
+    5%{opacity:.9;}
+    95%{opacity:.7;}
+    100%{opacity:0; transform:translateX(var(--bx,20px)) translateY(-115vh);}
+  }
+
+  /* ========== SPARKLES ========== */
+  .sparkle-canvas{position:fixed; inset:0; pointer-events:none; z-index:2;}
+
+  /* ========== CONFETTI ========== */
+  #confetti-canvas{position:fixed; inset:0; pointer-events:none; z-index:10;}
+
+  /* ========== FIREWORKS ========== */
+  #fireworks-canvas{position:fixed; inset:0; pointer-events:none; z-index:11;}
+
+  /* ========== BOOK ========== */
+  .book{
+    position:relative; z-index:1;
+    width:min(94vw, 660px);
+    height:min(86vh, 640px);
+    display:flex;
+    filter:drop-shadow(0 30px 45px rgba(90,30,55,.28));
+  }
+  .spine{
+    width:20px; flex-shrink:0;
+    background:linear-gradient(90deg, var(--pink-deep), var(--pink-primary) 55%, #c94a70);
+    border-radius:10px 0 0 10px; position:relative;
+  }
+  .spine::after{
+    content:''; position:absolute; inset:6px 4px;
+    background:repeating-linear-gradient(180deg, rgba(255,255,255,.18) 0 2px, transparent 2px 10px);
+    border-radius:6px;
+  }
+  .pages-stack{
+    flex:1; position:relative;
+    background:var(--paper);
+    border-radius:0 14px 14px 0;
+    box-shadow:inset -3px 0 0 var(--paper-shadow), 6px 6px 0 -2px #f7e7de, 10px 10px 0 -4px #f2ddd2;
+    overflow:hidden; perspective:1900px;
+  }
+  .page{
+    position:absolute; inset:0;
+    display:flex; flex-direction:column;
+    padding:40px 42px 30px;
+    opacity:0; pointer-events:none;
+    transform-origin:left center;
+    transform:rotateY(0deg);
+    transition: transform .9s cubic-bezier(.6,.05,.35,1), opacity .55s ease;
+    backface-visibility:hidden;
+  }
+  .page.active{ opacity:1; pointer-events:auto; z-index:5; }
+  .page.leaving{ transform:rotateY(-108deg); opacity:0; z-index:6; }
+
+  .eyebrow{
+    font-family:'Quicksand', sans-serif;
+    font-size:12.5px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--mauve);
+    font-weight:600; margin:0 0 8px;
+  }
+  h1.hero{
+    font-family:'Dancing Script', cursive; font-weight:700;
+    color:var(--pink-deep); font-size:clamp(40px, 8vw, 62px);
+    line-height:1.05; margin:0 0 6px;
+    text-shadow:0 2px 0 rgba(255,255,255,.6);
+  }
+  h2.page-title{
+    font-family:'Dancing Script', cursive;
+    font-size:38px; color:var(--pink-deep); margin:0 0 14px;
+  }
+  .sub{
+    font-family:'Quicksand', sans-serif;
+    color:var(--mauve); font-size:15px; margin:0 0 22px;
+  }
+
+  /* ========== COVER ========== */
+  #page-cover{ align-items:center; justify-content:center; text-align:center; }
+  .cover-flourish{ font-size:30px; margin-bottom:6px; opacity:.9; }
+  .cover-note{
+    font-family:'Cormorant Garamond', serif; font-style:italic;
+    color:var(--plum); font-size:19px; max-width:380px; margin:6px auto 30px;
+  }
+
+  /* ========== BUTTONS ========== */
+  .btn{
+    font-family:'Quicksand', sans-serif; font-weight:600;
+    font-size:15px; letter-spacing:.02em; color:#fff;
+    background:linear-gradient(135deg, var(--pink-primary), var(--pink-deep));
+    border:none; padding:13px 28px; border-radius:30px; cursor:pointer;
+    box-shadow:0 8px 20px -6px rgba(199,58,92,.6);
+    transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 24px -6px rgba(199,58,92,.7); }
+  .btn:active{ transform:translateY(0); }
+  .btn:disabled{ opacity:.6; cursor:default; transform:none; }
+  .btn.ghost{
+    background:transparent; color:var(--pink-deep);
+    border:1.5px solid var(--pink-primary); box-shadow:none;
+  }
+  .btn.ghost:hover{ background:var(--blush); }
+
+  /* ========== LETTER ========== */
+  #page-letter{ overflow:hidden; }
+  .letter-scroll{
+    flex:1; overflow-y:auto; padding-right:10px; margin-right:-10px;
+  }
+  .letter-scroll::-webkit-scrollbar{ width:6px; }
+  .letter-scroll::-webkit-scrollbar-thumb{ background:var(--petal); border-radius:10px; }
+  .letter-scroll p{
+    font-size:17.5px; line-height:1.68; color:var(--plum);
+    margin:0 0 16px; opacity:0; transform:translateY(10px);
+    animation:reveal .7s ease forwards;
+  }
+  @keyframes reveal{ to{ opacity:1; transform:translateY(0); } }
+  .letter-scroll strong{ color:var(--pink-deep); }
+  .letter-scroll .name-tag{ color:var(--pink-deep); font-weight:600; font-style:italic; }
+  .signoff{
+    text-align:right; font-family:'Dancing Script', cursive;
+    color:var(--pink-deep); font-size:26px; margin-top:4px;
+  }
+  .page-footer{
+    padding-top:16px; display:flex; align-items:center;
+    justify-content:space-between; border-top:1px dashed var(--petal); margin-top:14px;
+  }
+
+  /* ========== CAKE PAGE ========== */
+  #page-cake{ align-items:center; justify-content:center; text-align:center; overflow:visible; }
+  .cake-wrap{ position:relative; margin:0 auto 6px; width:160px; height:220px; }
+  /* plate */
+  .cake-plate{
+    position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+    width:170px; height:14px;
+    background:linear-gradient(180deg,#f8d6e3,#f0b8cc);
+    border-radius:50%; box-shadow:0 4px 12px rgba(183,58,92,.18);
+  }
+  /* bottom tier */
+  .cake-tier-1{
+    position:absolute; bottom:14px; left:50%; transform:translateX(-50%);
+    width:140px; height:72px;
+    background:linear-gradient(180deg,#f9d0df,#f4afc8);
+    border-radius:8px 8px 6px 6px;
+    box-shadow:inset 0 3px 0 rgba(255,255,255,.5), 0 4px 10px rgba(183,58,92,.18);
+  }
+  .cake-tier-1::after{
+    content:''; position:absolute; bottom:-2px; left:-4px; right:-4px; height:14px;
+    background:linear-gradient(180deg,#f9d0df,#f4afc8);
+    border-radius:0 0 50% 50% / 0 0 100% 100%;
+  }
+  /* frosting drip tier 1 */
+  .drip-1{
+    position:absolute; top:0; left:0; right:0; height:22px;
+    background:linear-gradient(180deg,rgba(255,255,255,.8),transparent);
+    border-radius:8px 8px 40% 40% / 8px 8px 100% 100%;
+  }
+  /* mid tier */
+  .cake-tier-2{
+    position:absolute; bottom:86px; left:50%; transform:translateX(-50%);
+    width:108px; height:58px;
+    background:linear-gradient(180deg,#fce4ee,#f8c5da);
+    border-radius:7px 7px 5px 5px;
+    box-shadow:inset 0 3px 0 rgba(255,255,255,.5), 0 3px 8px rgba(183,58,92,.14);
+  }
+  .drip-2{
+    position:absolute; top:0; left:0; right:0; height:18px;
+    background:linear-gradient(180deg,rgba(255,255,255,.75),transparent);
+    border-radius:7px 7px 40% 40% / 7px 7px 100% 100%;
+  }
+  /* top tier */
+  .cake-tier-3{
+    position:absolute; bottom:144px; left:50%; transform:translateX(-50%);
+    width:76px; height:46px;
+    background:linear-gradient(180deg,#fff0f5,#fcd6e7);
+    border-radius:6px 6px 5px 5px;
+    box-shadow:inset 0 2px 0 rgba(255,255,255,.6), 0 3px 8px rgba(183,58,92,.12);
+  }
+  .drip-3{
+    position:absolute; top:0; left:0; right:0; height:14px;
+    background:linear-gradient(180deg,rgba(255,255,255,.8),transparent);
+    border-radius:6px 6px 40% 40%;
+  }
+  /* candles */
+  .candles{ position:absolute; bottom:190px; left:50%; transform:translateX(-50%); display:flex; gap:12px; }
+  .candle-wrap{ display:flex; flex-direction:column; align-items:center; }
+  .candle-body{
+    width:8px; height:28px; border-radius:4px;
+    background:linear-gradient(180deg,var(--pink-primary),var(--pink-deep));
+    position:relative;
+  }
+  .candle-body::after{
+    content:''; position:absolute; top:0; left:50%; transform:translateX(-50%);
+    width:2px; height:8px;
+    background:linear-gradient(180deg,#888,#555);
+    border-radius:1px; top:-7px;
+  }
+  .flame{
+    width:10px; height:16px;
+    background:radial-gradient(ellipse at 50% 80%,#ffed4a,#ff9800 50%,rgba(255,80,0,.0));
+    border-radius:50% 50% 30% 30%;
+    margin-bottom:2px; position:relative;
+    animation:flicker .6s ease-in-out infinite alternate;
+    filter:drop-shadow(0 0 4px rgba(255,150,0,.9));
+    transform-origin:50% 100%;
+  }
+  @keyframes flicker{
+    0%{transform:scaleX(1) scaleY(1) rotate(-3deg);}
+    100%{transform:scaleX(.85) scaleY(1.1) rotate(3deg);}
+  }
+  .flame.blown{
+    animation:blowOut .5s ease forwards;
+  }
+  @keyframes blowOut{
+    to{opacity:0; transform:scaleX(.1) scaleY(0) translateY(-10px);}
+  }
+  /* decorations */
+  .cake-deco{
+    position:absolute; font-size:13px;
+    animation:decoFloat 2.5s ease-in-out infinite;
+  }
+  @keyframes decoFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+  .cake-msg{
+    font-family:'Dancing Script',cursive;
+    font-size:20px; color:var(--pink-deep);
+    margin-bottom:4px;
+  }
+  .cake-hint{
+    font-family:'Quicksand',sans-serif; font-size:13px;
+    color:var(--mauve); margin-bottom:14px;
+  }
+  .blow-btn{
+    font-family:'Quicksand',sans-serif; font-weight:700;
+    font-size:16px; padding:14px 32px; border-radius:30px;
+    background:linear-gradient(135deg,#f9a8c9,var(--pink-primary));
+    color:#fff; border:none; cursor:pointer;
+    box-shadow:0 8px 20px -6px rgba(199,58,92,.5);
+    transition:transform .2s, box-shadow .2s;
+    animation:pulseBtn 1.4s ease-in-out infinite;
+  }
+  .blow-btn:hover{ transform:translateY(-3px); box-shadow:0 12px 28px -6px rgba(199,58,92,.7); }
+  @keyframes pulseBtn{
+    0%,100%{box-shadow:0 8px 20px -6px rgba(199,58,92,.5);}
+    50%{box-shadow:0 8px 28px 0px rgba(199,58,92,.75);}
+  }
+  .blow-btn.done{ animation:none; background:linear-gradient(135deg,var(--ok),#5a9e55); }
+  .cake-confetti-row{ font-size:20px; letter-spacing:4px; animation:decoFloat 1.8s ease-in-out infinite; }
+
+  /* ========== WISH / HONEST ========== */
+  textarea{
+    width:100%; flex:1; min-height:130px; resize:none;
+    font-family:'Cormorant Garamond', serif; font-size:17px;
+    color:var(--plum); background:var(--blush);
+    border:1.5px solid #f4c9d9; border-radius:14px;
+    padding:16px 18px; outline:none;
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  textarea:focus{ border-color:var(--pink-primary); box-shadow:0 0 0 4px rgba(232,84,124,.12); }
+  textarea::placeholder{ color:#c98fa3; }
+  .status-msg{
+    font-family:'Quicksand', sans-serif; font-size:13.5px;
+    min-height:18px; margin-top:10px; color:var(--mauve);
+  }
+  .status-msg.ok{ color:var(--ok); font-weight:600; }
+  .status-msg.err{ color:var(--pink-deep); font-weight:600; }
+  .action-row{ display:flex; align-items:center; gap:14px; margin-top:14px; }
+
+  /* ========== THANK YOU ========== */
+  #page-thanks{ align-items:center; justify-content:center; text-align:center; }
+  .thanks-flourish{ font-size:34px; margin-bottom:8px; }
+  .thanks-big{
+    font-family:'Dancing Script',cursive;
+    font-size:clamp(32px,7vw,54px);
+    color:var(--pink-deep); margin:0 0 12px;
+    text-shadow:0 2px 0 rgba(255,255,255,.6);
+  }
+  .thanks-hearts{ font-size:26px; letter-spacing:8px; margin:10px 0; animation:decoFloat 2s ease-in-out infinite; }
+  .thanks-sub{
+    font-family:'Cormorant Garamond',serif; font-style:italic;
+    color:var(--plum); font-size:18px; max-width:380px; margin:0 auto 20px;
+    line-height:1.55;
+  }
+
+  /* ========== DOTS ========== */
+  .dots{
+    position:absolute; bottom:14px; left:0; right:0;
+    display:flex; justify-content:center; gap:8px;
+    z-index:9; font-family:'Quicksand',sans-serif;
+  }
+  .dot{
+    width:7px; height:7px; border-radius:50%;
+    background:#f0c4d3; transition:all .3s ease;
+  }
+  .dot.on{ background:var(--pink-deep); width:20px; border-radius:5px; }
+
+  @media(max-width:560px){
+    .page{ padding:30px 24px 22px; }
+    h1.hero{ font-size:42px; }
+    h2.page-title{ font-size:30px; }
+  }
+  @media(prefers-reduced-motion:reduce){
+    .petal{ animation:none; display:none; }
+    .heart,.balloon-el{ animation:none; display:none; }
+    .page{ transition:opacity .3s ease; }
+    .page.leaving{ transform:none; }
+    .letter-scroll p{ animation:none; opacity:1; transform:none; }
+    .flame{ animation:none; }
+  }
+</style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/0179d719c431a79e.data_sdk.js" type="text/javascript" integrity="sha512-OsRvJkI5GkC3MJQcgotQYotpzrMSX415GiKKgvYdxQEEkzD/fdchShO2FMSy0PJr/tiINMXOk5Vl2zAgg6bUiA=="></script>
+  <script src="/_sdk/0b3af1c300e720aa.resizing_sdk.js" type="text/javascript" integrity="sha512-nX1P6oXZmEY5wCI2lUVg3BwKu1cr0yi+ZpXgZ0Yn90vkSwvpmyzBMvOyD6VLJUtBwFI2dSrw1b6OvORxSggw3w=="></script>
+ </head>
+ <body data-template-id="__page-root"><!-- DISCORD INTRO -->
+  <div id="discord-intro">
+   <svg class="discord-logo" viewbox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60.1 4.9A58.6 58.6 0 0 0 45.5.9a41 41 0 0 0-1.8 3.7 54.2 54.2 0 0 0-16.3 0A41.4 41.4 0 0 0 25.6.9 58.5 58.5 0 0 0 11 4.9C1.6 19.5-1 33.7.3 47.7a59 59 0 0 0 18 9.1 44.5 44.5 0 0 0 3.8-6.2 38.4 38.4 0 0 1-6-2.9c.5-.4 1-.7 1.5-1.1a42 42 0 0 0 36 0c.5.4 1 .8 1.5 1.1a38.6 38.6 0 0 1-6 2.9 44.3 44.3 0 0 0 3.8 6.2 58.7 58.7 0 0 0 18-9.1C72 31.5 68.2 17.4 60.1 4.9ZM23.7 39.3c-3.5 0-6.4-3.2-6.4-7.2s2.8-7.2 6.4-7.2c3.5 0 6.4 3.2 6.4 7.2s-2.9 7.2-6.4 7.2Zm23.6 0c-3.5 0-6.4-3.2-6.4-7.2s2.8-7.2 6.4-7.2c3.5 0 6.4 3.2 6.4 7.2s-2.8 7.2-6.4 7.2Z" fill="#5865F2" />
+   </svg>
+   <div class="discord-status" id="discordStatus" data-template-id="discord-status"></div>
+   <div class="discord-bar">
+    <div class="discord-bar-fill" id="discordBar"></div>
+   </div>
+   <div class="voice-wave" id="voiceWave">
+    <div class="voice-bar"></div>
+    <div class="voice-bar"></div>
+    <div class="voice-bar"></div>
+    <div class="voice-bar"></div>
+    <div class="voice-bar"></div>
+   </div>
+   <div class="discord-meeting" id="discordMeeting" data-template-id="discord-meeting">
+    You met <span data-template-id="discord-meet-name">Yab 🌸</span>
+   </div><button class="discord-skip" id="discordSkip" data-template-id="discord-skip">Skip intro</button>
+  </div><!-- TIMELINE -->
+  <div id="timeline-screen">
+   <div class="timeline-sub canva-text" data-template-id="timeline-eyebrow">
+    How it started
+   </div>
+   <div class="timeline-title canva-text" data-template-id="timeline-title">
+    How We Met 🌸
+   </div>
+   <div class="timeline">
+    <div class="tl-item" style="transition-delay:.1s">
+     <div class="tl-dot">
+      🎮
+     </div>
+     <div class="tl-content">
+      <div class="tl-date canva-text" data-template-id="tl-date-1">
+       The Beginning
+      </div>
+      <div class="tl-text canva-text" data-template-id="tl-text-1">
+       A random Discord call. Dapat saglit lang ako. Pero <strong>hindi na ako nag-leave.</strong>
+      </div>
+     </div>
+    </div>
+    <div class="tl-item" style="transition-delay:.22s">
+     <div class="tl-dot">
+      💬
+     </div>
+     <div class="tl-content">
+      <div class="tl-date canva-text" data-template-id="tl-date-2">
+       Getting Closer
+      </div>
+      <div class="tl-text canva-text" data-template-id="tl-text-2">
+       Random calls, tawanan, kulitan, usapang walang sense pero <strong>sobrang saya.</strong>
+      </div>
+     </div>
+    </div>
+    <div class="tl-item" style="transition-delay:.34s">
+     <div class="tl-dot">
+      🌸
+     </div>
+     <div class="tl-content">
+      <div class="tl-date canva-text" data-template-id="tl-date-3">
+       Best Friends
+      </div>
+      <div class="tl-text canva-text" data-template-id="tl-text-3">
+       Naging safe place kita. Ang dali mong kausap. <strong>Yab became an important person to me.</strong>
+      </div>
+     </div>
+    </div>
+    <div class="tl-item" style="transition-delay:.46s">
+     <div class="tl-dot">
+      🤍
+     </div>
+     <div class="tl-content">
+      <div class="tl-date canva-text" data-template-id="tl-date-4">
+       Today 🎂
+      </div>
+      <div class="tl-text canva-text" data-template-id="tl-text-4">
+       First birthday mo na mabibigyan kita ng gift, simple lang babawi me next time. <strong>Enjoy po</strong>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="timeline-btn-row"><button class="btn" id="timelineNext" data-template-id="timeline-btn">Open the book 📖</button>
+   </div>
+  </div><!-- AMBIENT LAYERS -->
+  <div class="petals" id="petals"></div>
+  <div class="hearts" id="heartsContainer"></div>
+  <div class="balloons" id="balloonsContainer"></div>
+  <canvas class="sparkle-canvas" id="sparkleCanvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+  <canvas id="fireworks-canvas"></canvas><!-- BOOK -->
+  <div class="book">
+   <div class="spine"></div>
+   <div class="pages-stack" id="pages"><!-- PAGE 1 — COVER -->
+    <section class="page active" id="page-cover">
+     <div class="cover-flourish canva-text" data-template-id="cover-flourish">
+      🌸 🎉 🌸
+     </div>
+     <h1 class="hero canva-text" data-template-id="cover-title">Happy Birthday</h1>
+     <p class="cover-note canva-text" data-template-id="cover-note">One small gift lang po for you gawa ni ashedd or shedie😊</p><button class="btn canva-button" data-next="page-letter" data-template-id="cover-btn">Open? →</button>
+    </section><!-- PAGE 2 — LETTER -->
+    <section class="page" id="page-letter">
+     <p class="eyebrow canva-text" data-template-id="letter-eyebrow">A small gift from me to you</p>
+     <h2 class="page-title canva-text" data-template-id="letter-title">For you po. Yab 🌸</h2>
+     <div class="letter-scroll" id="letterScroll">
+      <p style="animation-delay:.05s">Happy Birthday po, Yabyab. 🌸🎉</p>
+      <p style="animation-delay:.10s">Or should I say... Happy Birthday po, <strong>Nica</strong>. HAHAHA. Alam kong halos lahat po ng tao tawag sa'yo ay "Cai," pero ewan ko po ba, nasanay na talaga akong tawagin kang <span class="name-tag">yab</span>. Dati pang-asar lang dapat 'yon, pero hindi ko namalayan na naging nickname na talaga kita. Parang ang weird na po kapag iba pa itatawag ko sa'yo.</p>
+      <p style="animation-delay:.15s">Grabe po, first birthday mo na simula nung naging close tayo. Hindi ko talaga in-expect na yung simpleng pagsali ko sa Discord call noon would lead to meeting someone na magiging sobrang important sa'kin. Kaya special din po 'tong birthday mo para sa'kin, kasi first time kong ma-celebrate 'to bilang best friend mo. Sana po kahit simpleng long message lang 'to, mapasaya ka kahit papaano. Opo, alam kong mahaba siya... himala na nga na nag-type ako ng ganito kahaba. HAHAHA.</p>
+      <p style="animation-delay:.20s">Hindi ko po alam kung naaalala mo pa, pero ever since sumali ako sa Discord call na 'yon, bigla na lang ayoko nang mag-leave. Dapat saglit lang talaga ako doon, pero dahil naging close ko po kayo, lalo na ikaw, napatagal ako. Unang usap pa lang natin, parang gusto na agad kitang maging best friend. Hindi ko alam kung bakit, pero sobrang comfortable ko agad sa'yo. Ang dali mong kausap, ang dali mong sabayan sa trip, at ang dali mong maging safe place.</p>
+      <p style="animation-delay:.25s">Nakakatawa lang pong isipin na ilang buwan pa lang tayong magkakilala noon, pero ang dami na agad nating memories. Ang daming tawanan, kulitan, asaran, random calls, at mga usapang walang sense pero sobrang saya. Hindi ko namalayan na naging isa ka na pala sa mga taong pinaka-pinapahalagahan ko.</p>
+      <p style="animation-delay:.30s">Tapos habang tumatagal... nagkaroon po ako ng feelings sa'yo. Kaya ako umamin kasi gusto ko lang maging honest. Hindi para pilitin ka o baguhin yung friendship natin. Gusto ko lang pong sabihin yung nararamdaman ko noon.</p>
+      <p style="animation-delay:.35s">Pero alam kong pagkatapos nun, nagbago po ako. Nagawa ko yung mga bagay na hindi ko dapat ginawa, at alam kong nasaktan po kita at naapektuhan yung friendship natin. Unti-unti ring nabawasan yung closeness natin, at hanggang ngayon, isa pa rin 'yon sa mga biggest regrets ko.</p>
+      <p style="animation-delay:.40s"><strong>I'm really sorry po, yab.</strong></p>
+      <p style="animation-delay:.45s">Sorry po talaga sa lahat ng nagawa ko. Sorry po kung naging dahilan ako para mabawasan yung closeness natin. Sorry po kung naging iba yung trato ko at naging dahilan para maging awkward ang lahat. Hindi ko na po mababago yung mga nangyari, pero gusto kong malaman mo na sincere po talaga akong nagsisisi. Kung pwede lang pong i-undo lahat, baka ilang beses ko na pong ginawa.</p>
+      <p style="animation-delay:.50s">Alam mo po... may isang bagay akong namimiss. Dati tinatawag mo akong <span class="name-tag">"Shedie."</span> Ngayon, bihira ko na po siyang marinig. Maliit na bagay lang siguro 'yon para sa iba, pero namimiss ko po siya. Hindi dahil sa nickname mismo, kundi dahil naaalala ko kung gaano tayo ka-close dati tuwing naririnig ko 'yon.</p>
+      <p style="animation-delay:.55s">Namimiss ko po yung dating tayo. Yung wala tayong ilangan, yung kaya nating magkwentuhan tungkol sa kahit ano, yung simpleng tawanan lang sapat na. Alam kong hindi na natin maibabalik exactly yung dati, at okay lang po. Siguro ang gusto ko lang sana is magkaroon tayo ng chance na ayusin ulit lahat. Hindi para bumalik lang sa old us, kundi para gumawa ng mas magandang version ng friendship natin. Yung mas healthy, mas mature, at mas matibay.</p>
+      <p style="animation-delay:.60s">Sana po ikaw rin... gusto mong ayusin 'to. Hindi po kita pine-pressure, at irerespeto ko kahit anong maramdaman mo. Pero kung gugustuhin mo ring subukan, nandito lang po ako. Kasi para sa'kin, sobrang worth it ng friendship natin para hindi ipaglaban.</p>
+      <p style="animation-delay:.65s">Thank you po sa lahat, yab. Thank you po sa pagiging best friend ko. Thank you po sa lahat ng memories, sa mga tawanan, sa pagiging makulit, at sa pagiging ikaw. Hindi mo siguro alam kung gaano kalaki yung naging impact mo sa buhay ko.</p>
+      <p style="animation-delay:.70s">Ngayong birthday mo po, ang wish ko lang ay maging masaya ka palagi. Sana po maging lucky year mo 'to. Sana lahat ng good karma na deserve mo bumalik sa'yo nang doble. Sana maabot mo lahat ng pangarap mo, maging healthy ka lagi, at sana wala nang masyadong stress (except siguro kapag talo sa laro... wala na po tayong magagawa doon HAHAHA).</p>
+      <p style="animation-delay:.75s">At syempre... sorry po ulit sa lahat. Sana po mapatawad mo ako. At sana, balang araw, marinig ko ulit yung <span class="name-tag">"Shedie."</span> Hindi dahil sa nickname, kundi dahil ibig sabihin nun... okay na ulit tayo.</p>
+      <p style="animation-delay:.80s">Lastly... alam mo naman po ako. Hindi talaga ako sanay gumawa ng long message. Feeling ko ubos na vocabulary ko rito HAHAHA. Kaya kung umabot ka hanggang dito, congratulations po. May free "thank you" ka galing sa'kin. 😭</p>
+      <p style="animation-delay:.85s">Happy Birthday ulit po, yab. 🤍</p>
+      <p style="animation-delay:.90s">I'm really grateful po na nakilala kita dahil lang sa isang random Discord call. Kung hindi ako sumali noon, baka hindi kita nakilala at baka wala tayong memories na mababalikan ngayon. Kaya sobrang thankful po talaga ako.</p>
+      <p style="animation-delay:.95s">Sana po hindi lang ito ang first birthday na mace-celebrate ko kasama ka bilang best friend. Sana marami pa. Sana sa mga susunod, mas marami na ulit tayong tawanan, mas maraming memories, at mas kaunting regrets. At sana... maging okay na ulit tayo, o baka mas maging okay pa kaysa dati.</p>
+      <p style="animation-delay:1s">Take care po palagi, yab. Enjoy your special day. Deserve mo po lahat ng happiness sa mundo.</p>
+      <p class="signoff" style="animation-delay:1.05s">Happy Birthday po ulit. -Your Best Friend:) 🤍🌸</p>
+     </div>
+     <div class="page-footer"><span class="sub canva-text" style="margin:0;" data-template-id="letter-footer-note">Read mopoo ahh, yab 🥺</span> <button class="btn canva-button" data-next="page-cake" data-template-id="letter-btn">Continue →</button>
+     </div>
+    </section><!-- PAGE 2.5 — CAKE -->
+    <section class="page" id="page-cake">
+     <p class="eyebrow canva-text" data-template-id="cake-eyebrow">Before making a wish po</p>
+     <div class="cake-msg canva-text" data-template-id="cake-msg">
+      Make a wish, Yab 🎂
+     </div>
+     <div class="cake-hint canva-text" data-template-id="cake-hint">
+      Blow the candles! 🕯️
+     </div>
+     <div class="cake-wrap" id="cakeWrap"><!-- decorations -->
+      <div class="cake-deco" style="top:20px;left:0px;animation-delay:.4s">
+       🌸
+      </div>
+      <div class="cake-deco" style="top:20px;right:0px;animation-delay:.9s">
+       ✨
+      </div><!-- candles -->
+      <div class="candles" id="candles">
+       <div class="candle-wrap">
+        <div class="flame" id="f1"></div>
+        <div class="candle-body"></div>
+       </div>
+       <div class="candle-wrap">
+        <div class="flame" id="f2"></div>
+        <div class="candle-body" style="background:linear-gradient(180deg,#d4a0f9,#9b59b6)"></div>
+       </div>
+       <div class="candle-wrap">
+        <div class="flame" id="f3"></div>
+        <div class="candle-body" style="background:linear-gradient(180deg,#f9e04a,#e0a800)"></div>
+       </div>
+      </div><!-- tiers -->
+      <div class="cake-tier-3">
+       <div class="drip-3"></div>
+      </div>
+      <div class="cake-tier-2">
+       <div class="drip-2"></div>
+      </div>
+      <div class="cake-tier-1">
+       <div class="drip-1"></div>
+      </div>
+      <div class="cake-plate"></div>
+     </div>
+     <div class="cake-confetti-row" id="cakeConfettiRow" style="opacity:0">
+      🎉🎊🎉
+     </div>
+     <div style="margin-top:16px;"><button class="blow-btn" id="blowBtn" data-template-id="blow-btn">💨 Blow the Candles!</button>
+     </div>
+     <div style="margin-top:12px; display:none;" id="cakeNext"><button class="btn canva-button" data-next="page-wish" data-template-id="cake-next-btn">Make a Wish ✨</button>
+     </div>
+    </section><!-- PAGE 3 — MAKE A WISH -->
+    <section class="page" id="page-wish">
+     <p class="eyebrow canva-text" data-template-id="wish-eyebrow">Before blowing the candle po</p>
+     <h2 class="page-title canva-text" data-template-id="wish-title">Try mopo mag wish🕯️</h2>
+     <p class="sub canva-text" data-template-id="wish-sub">Say mopo here ano wish mo po</p><textarea id="wishInput" data-template-id="wish-input"></textarea>
+     <div class="action-row"><button class="btn canva-button" id="wishSend" data-template-id="wish-send-btn">Click mo this after mag wish 🌸</button> <button class="btn ghost canva-button" id="wishContinue" data-next="page-honest" style="display:none;" data-template-id="wish-continue-btn">continue po→</button>
+     </div>
+     <p class="status-msg" id="wishStatus"></p>
+    </section><!-- PAGE 4 — HONEST MESSAGE -->
+    <section class="page" id="page-honest">
+     <p class="eyebrow canva-text" data-template-id="honest-eyebrow">Honest po na question</p>
+     <h2 class="page-title canva-text" data-template-id="honest-title">Yung want mopo talaga...</h2>
+     <p class="sub canva-text" data-template-id="honest-sub">Ano po gusto mong sabihin ng honest po, kahit ano po 'yan, okay lang. Kahit ano po basta po honest</p><textarea id="honestInput" data-template-id="honest-input"></textarea>
+     <div class="action-row"><button class="btn canva-button" id="honestSend" data-template-id="honest-send-btn">Send 💌</button> <button class="btn ghost canva-button" id="honestContinue" data-next="page-thanks" style="display:none;" data-template-id="honest-continue-btn">Continue poo →</button>
+     </div>
+     <p class="status-msg" id="honestStatus"></p>
+    </section><!-- PAGE 5 — THANK YOU -->
+    <section class="page" id="page-thanks">
+     <div class="thanks-flourish" data-template-id="thanks-flourish">
+      🌸 🤍 🌸
+     </div>
+     <div class="thanks-big canva-text" data-template-id="thanks-big">
+      Thankiee Yabyab! 🎉
+     </div>
+     <div class="thanks-hearts">
+      🤍 🌸 🤍
+     </div>
+     <p class="thanks-sub canva-text" data-template-id="thanks-sub-1">Thankyou po sa pag read ng lahat poo, Thankyou din po sa pag sagot ng lahat ng honesttt.</p>
+     <p class="thanks-sub canva-text" style="font-size:16px; margin-bottom:10px;" data-template-id="thanks-sub-2">Thankie din po sa Lahat lahat and sorry eto lang ma bibigay ko this birthday mopo</p>
+     <p class="cover-note canva-text" style="margin-bottom:16px; font-size:17px;" data-template-id="thanks-closing">Happy Birthday ulit Yabyab. 🌸</p><button class="btn ghost canva-button" data-next="page-cover" data-template-id="thanks-replay-btn">↺ Ulett?</button>
+    </section>
+   </div>
+   <div class="dots" id="dots"></div>
+  </div>
+  <audio id="bgMusic" loop><source src="Music.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+/* ============================================================
+   DISCORD WEBHOOKS
+============================================================ */
+const WISH_WEBHOOK_URL   = "https://discord.com/api/webhooks/1521995319070556193/Gw1Z92JuMFqaczDq7PNU0OWFptolIkr9t086NmqUCPsi_EVa9BZ3nlj1slF_jd5Vn0ld";
+const HONEST_WEBHOOK_URL = "https://discord.com/api/webhooks/1521995319070556193/Gw1Z92JuMFqaczDq7PNU0OWFptolIkr9t086NmqUCPsi_EVa9BZ3nlj1slF_jd5Vn0ld";
+
+/* ============================================================
+   VH FIX
+============================================================ */
+function setVh(){ document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px'); }
+setVh(); window.addEventListener('resize', setVh);
+
+/* ============================================================
+   DISCORD INTRO
+============================================================ */
+const introEl    = document.getElementById('discord-intro');
+const statusEl2  = document.getElementById('discordStatus');
+const barEl      = document.getElementById('discordBar');
+const meetingEl  = document.getElementById('discordMeeting');
+const voiceWave  = document.getElementById('voiceWave');
+const skipBtn    = document.getElementById('discordSkip');
+
+function runIntro(){
+  const steps = [
+    { text:'Connecting to Discord...', bar:20,  delay:0    },
+    { text:'Authenticating...',        bar:45,  delay:900  },
+    { text:'Joining voice call...',    bar:70,  delay:1800 },
+    { text:'Loading channel...',       bar:88,  delay:2700 },
+    { text:'Connected! 🎉',            bar:100, delay:3500 },
+  ];
+  steps.forEach(s => {
+    setTimeout(() => {
+      statusEl2.textContent = s.text;
+      barEl.style.width = s.bar + '%';
+    }, s.delay);
+  });
+  setTimeout(() => {
+    voiceWave.classList.add('show');
+    statusEl2.textContent = 'You are in: 🎙️ Birthday Call';
+  }, 4300);
+  setTimeout(() => {
+    meetingEl.style.opacity = '1';
+  }, 5000);
+  setTimeout(() => {
+    endIntro();
+  }, 6600);
+}
+
+function endIntro(){
+  introEl.classList.add('fade-out');
+  setTimeout(() => {
+    introEl.style.display = 'none';
+    showTimeline();
+  }, 800);
+}
+
+skipBtn.addEventListener('click', endIntro);
+runIntro();
+
+/* ============================================================
+   TIMELINE
+============================================================ */
+const timelineScreen = document.getElementById('timeline-screen');
+const tlItems = document.querySelectorAll('.tl-item');
+
+function showTimeline(){
+  timelineScreen.classList.add('show');
+  tlItems.forEach((item, i) => {
+    setTimeout(() => item.classList.add('reveal'), 300 + i * 140);
+  });
+}
+
+document.getElementById('timelineNext').addEventListener('click', () => {
+  timelineScreen.classList.remove('show');
+  setTimeout(() => { timelineScreen.style.display = 'none'; }, 800);
+  startAmbient();
+});
+
+/* ============================================================
+   PETALS
+============================================================ */
+function startAmbient(){
+  const petalHost = document.getElementById('petals');
+  for(let i=0;i<14;i++){
+    const p = document.createElement('div');
+    p.className = 'petal';
+    p.style.left = Math.random()*100+'vw';
+    const dur = 9 + Math.random()*8;
+    const swayDur = 3 + Math.random()*3;
+    p.style.animationDuration = dur+'s, '+swayDur+'s';
+    p.style.animationDelay = (Math.random()*10)+'s, 0s';
+    p.style.opacity = (0.35 + Math.random()*0.35).toFixed(2);
+    petalHost.appendChild(p);
+  }
+  spawnHearts();
+  spawnBalloons();
+  startSparkles();
+}
+
+/* ============================================================
+   FLOATING HEARTS
+============================================================ */
+function spawnHearts(){
+  const host = document.getElementById('heartsContainer');
+  const emojis = ['🤍','💗','💖','🌸','✨','💕'];
+  function makeHeart(){
+    const h = document.createElement('div');
+    h.className = 'heart';
+    h.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+    h.style.left = (Math.random()*96)+'vw';
+    const dur = 7 + Math.random()*8;
+    h.style.animationDuration = dur+'s';
+    h.style.animationDelay = (Math.random()*4)+'s';
+    h.style.fontSize = (12 + Math.random()*14)+'px';
+    host.appendChild(h);
+    setTimeout(() => h.remove(), (dur + 4)*1000);
+  }
+  for(let i=0;i<6;i++) setTimeout(() => makeHeart(), i * 1400);
+  setInterval(makeHeart, 2200);
+}
+
+/* ============================================================
+   BALLOONS
+============================================================ */
+function spawnBalloons(){
+  const host = document.getElementById('balloonsContainer');
+  const balEmojis = ['🎈','🎀','🎊'];
+  function makeBalloon(){
+    const b = document.createElement('div');
+    b.className = 'balloon-el';
+    b.textContent = balEmojis[Math.floor(Math.random()*balEmojis.length)];
+    b.style.left = (Math.random()*92)+'vw';
+    const dur = 10 + Math.random()*10;
+    b.style.animationDuration = dur+'s';
+    b.style.animationDelay = (Math.random()*3)+'s';
+    b.style.setProperty('--bx', (Math.random()*80-40)+'px');
+    host.appendChild(b);
+    setTimeout(() => b.remove(), (dur + 3.5)*1000);
+  }
+  for(let i=0;i<3;i++) setTimeout(() => makeBalloon(), i*2500);
+  setInterval(makeBalloon, 4000);
+}
+
+/* ============================================================
+   SPARKLES (canvas)
+============================================================ */
+function startSparkles(){
+  const canvas = document.getElementById('sparkleCanvas');
+  const ctx = canvas.getContext('2d');
+  const sparks = [];
+  function resize(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize(); window.addEventListener('resize', resize);
+  function addSpark(x, y){
+    for(let i=0;i<3;i++){
+      sparks.push({
+        x: x || Math.random()*canvas.width,
+        y: y || Math.random()*canvas.height,
+        r: 2 + Math.random()*3,
+        a: 1, da: 0.02 + Math.random()*0.02,
+        dx: (Math.random()-.5)*1.2, dy: (Math.random()-.5)*1.2,
+        color: `hsl(${330+Math.random()*40},90%,75%)`
+      });
+    }
+  }
+  setInterval(() => addSpark(), 400);
+  document.addEventListener('mousemove', e => addSpark(e.clientX, e.clientY));
+  function loop(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    for(let i=sparks.length-1;i>=0;i--){
+      const s=sparks[i];
+      ctx.save(); ctx.globalAlpha=s.a;
+      ctx.fillStyle=s.color;
+      ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fill();
+      ctx.restore();
+      s.x+=s.dx; s.y+=s.dy; s.a-=s.da; s.r*=.97;
+      if(s.a<=0) sparks.splice(i,1);
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+}
+
+/* ============================================================
+   CONFETTI BURST
+============================================================ */
+function burstConfetti(duration=3500){
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  const pieces = [];
+  const colors = ['#e8547c','#f9a8c9','#ffd700','#b73a5c','#fff','#a9647e','#5865f2'];
+  for(let i=0;i<120;i++){
+    pieces.push({
+      x: Math.random()*canvas.width,
+      y: Math.random()*canvas.height - canvas.height,
+      w: 7+Math.random()*7, h: 4+Math.random()*5,
+      color: colors[Math.floor(Math.random()*colors.length)],
+      angle: Math.random()*Math.PI*2,
+      spin: (Math.random()-.5)*.18,
+      vy: 2+Math.random()*3, vx: (Math.random()-.5)*2.5,
+      alpha:1
+    });
+  }
+  const end = Date.now() + duration;
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    pieces.forEach(p => {
+      ctx.save(); ctx.globalAlpha=p.alpha;
+      ctx.translate(p.x,p.y); ctx.rotate(p.angle);
+      ctx.fillStyle=p.color;
+      ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+      ctx.restore();
+      p.x+=p.vx; p.y+=p.vy; p.angle+=p.spin;
+      if(p.y > canvas.height){ p.y=-10; p.x=Math.random()*canvas.width; }
+      if(Date.now() > end - 800) p.alpha -= .012;
+    });
+    if(Date.now() < end) requestAnimationFrame(draw);
+    else ctx.clearRect(0,0,canvas.width,canvas.height);
+  }
+  draw();
+}
+
+/* ============================================================
+   FIREWORKS
+============================================================ */
+function launchFireworks(duration=4000){
+  const canvas = document.getElementById('fireworks-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  const particles = [];
+  const fwColors = ['#e8547c','#ffd700','#fff','#5865f2','#57f287','#f9a8c9','#b73a5c'];
+  function explode(x, y){
+    for(let i=0;i<60;i++){
+      const angle = (Math.PI*2/60)*i;
+      const speed = 2.5+Math.random()*3.5;
+      particles.push({
+        x,y,
+        vx:Math.cos(angle)*speed, vy:Math.sin(angle)*speed,
+        alpha:1, r:2+Math.random()*2,
+        color:fwColors[Math.floor(Math.random()*fwColors.length)]
+      });
+    }
+  }
+  const fwInterval = setInterval(() => {
+    explode(80+Math.random()*(canvas.width-160), 60+Math.random()*(canvas.height*.5));
+  }, 600);
+  const end = Date.now()+duration;
+  function draw(){
+    ctx.fillStyle='rgba(0,0,0,.18)';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    particles.forEach((p,i) => {
+      ctx.save(); ctx.globalAlpha=p.alpha;
+      ctx.fillStyle=p.color;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
+      ctx.restore();
+      p.x+=p.vx; p.y+=p.vy; p.vy+=.06; p.vx*=.98;
+      p.alpha-=.018; p.r*=.98;
+    });
+    for(let i=particles.length-1;i>=0;i--) if(particles[i].alpha<=0) particles.splice(i,1);
+    if(Date.now()<end) requestAnimationFrame(draw);
+    else{ clearInterval(fwInterval); ctx.clearRect(0,0,canvas.width,canvas.height); }
+  }
+  draw();
+}
+
+/* ============================================================
+   BOOK NAVIGATION
+============================================================ */
+const order = ['page-cover','page-letter','page-cake','page-wish','page-honest','page-thanks'];
+const pagesEl = document.getElementById('pages');
+const dotsEl  = document.getElementById('dots');
+let current = 'page-cover';
+
+order.forEach(id => {
+  const dot = document.createElement('div');
+  dot.className = 'dot' + (id===current ? ' on' : '');
+  dot.dataset.id = id;
+  dotsEl.appendChild(dot);
+});
+
+function updateDots(id){
+  [...dotsEl.children].forEach(d => d.classList.toggle('on', d.dataset.id===id));
+}
+
+function goTo(nextId){
+  if(nextId===current) return;
+  const curEl  = document.getElementById(current);
+  const nextEl = document.getElementById(nextId);
+  curEl.classList.add('leaving'); curEl.classList.remove('active');
+  nextEl.classList.add('active');
+  updateDots(nextId);
+  const scroller = nextEl.querySelector('.letter-scroll');
+  if(scroller) scroller.scrollTop = 0;
+  setTimeout(() => curEl.classList.remove('leaving'), 950);
+  current = nextId;
+  if(nextId === 'page-thanks'){ burstConfetti(4000); launchFireworks(4000); }
+}
+
+pagesEl.addEventListener('click', e => {
+  const btn = e.target.closest('[data-next]');
+  if(btn) goTo(btn.dataset.next);
+});
+
+/* ============================================================
+   CAKE — BLOW CANDLES
+============================================================ */
+const blowBtn = document.getElementById('blowBtn');
+const flames  = [document.getElementById('f1'), document.getElementById('f2'), document.getElementById('f3')];
+let blown = false;
+
+blowBtn.addEventListener('click', () => {
+  if(blown) return;
+  blown = true;
+  flames.forEach((f,i) => setTimeout(() => f.classList.add('blown'), i*120));
+  blowBtn.textContent = '🎉 Wish Made!';
+  blowBtn.classList.add('done');
+  blowBtn.disabled = true;
+  const confRow = document.getElementById('cakeConfettiRow');
+  confRow.style.opacity = '1';
+  confRow.style.transition = 'opacity .5s';
+  document.getElementById('cakeNext').style.display = 'block';
+  burstConfetti(2500);
+});
+
+/* ============================================================
+   DISCORD SEND HELPER
+============================================================ */
+async function sendToDiscord({url, text, btn, statusEl, continueBtn, label}){
+  if(!text.trim()){
+    statusEl.textContent = 'Sulat kapo muna here, yab 🌸';
+    statusEl.className = 'status-msg err'; return;
+  }
+  const original = btn.textContent;
+  btn.disabled = true; btn.textContent = 'Ipinapadala...'; statusEl.textContent = '';
+  try{
+    const res = await fetch(url, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ content: `${label}\n${text.slice(0,1900)}` })
+    });
+    if(res.ok || res.status===204){
+      statusEl.textContent = 'Done napo! 🌸';
+      statusEl.className = 'status-msg ok';
+      btn.style.display = 'none';
+      if(continueBtn) continueBtn.style.display = 'inline-block';
+    } else throw new Error('bad');
+  } catch(err){
+    statusEl.textContent = 'May problema sa pagpapadala, subukan ulit.';
+    statusEl.className = 'status-msg err';
+    btn.disabled = false; btn.textContent = original;
+  }
+}
+
+document.getElementById('wishSend').addEventListener('click', () => {
+  sendToDiscord({
+    url: WISH_WEBHOOK_URL,
+    text: document.getElementById('wishInput').value,
+    btn: document.getElementById('wishSend'),
+    statusEl: document.getElementById('wishStatus'),
+    continueBtn: document.getElementById('wishContinue'),
+    label: '🕯️ **Her wish**'
+  });
+});
+
+document.getElementById('honestSend').addEventListener('click', () => {
+  sendToDiscord({
+    url: HONEST_WEBHOOK_URL,
+    text: document.getElementById('honestInput').value,
+    btn: document.getElementById('honestSend'),
+    statusEl: document.getElementById('honestStatus'),
+    continueBtn: document.getElementById('honestContinue'),
+    label: '💌 **Honest opinion niya**'
+  });
+});
+
+/* ============================================================
+   MUSIC
+============================================================ */
+const music = document.getElementById('bgMusic');
+music.volume = 0.1;
+document.addEventListener('click', () => music.play().catch(()=>{}), { once:true });
+</script>
+  <script src="/_sdk/6740099151a06780.editing_sdk.js" integrity="sha512-eSc5OWFJjK6fUpxViOKXm5ekJ3Gp5icgygsjPVz9Xzudb9TkX/uNdpqNHc63uN0PdxYE9+g8pZAHIib0FgE0Cw=="></script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a14f9a4b02431faa',t:'MTc4MzAxNTc3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
